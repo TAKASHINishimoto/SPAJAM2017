@@ -1,0 +1,131 @@
+#start_button img {
+ margin            : 55% auto;
+}
+#top_page {
+ background-color  : #F5A623;
+ background-image  : url("../img/top_bk.png");
+ background-repeat : repeat-y;
+ background-size   : 100%;
+ text-align        : center;
+}
+#top_page h1 {
+ background        : #fff;
+ color             : #444;
+ font-size         : 80px;
+ height            : 150px;
+ text-align        : center;
+}
+#top_page h1 > img {
+ margin            : 50px 0 0 0;
+}
+#top_page img {
+ width             : 80%;
+}
+
+#score_page {
+ background-color  : #F5A623;
+ background-repeat : repeat-y;
+ background-size   : 100%;
+ text-align        : center;
+}
+#score_area {
+  background-color: #F5E6CE;
+  margin: 30px 20px 10px 20px;
+  border-radius: 20px;
+}
+#score_top {
+  background-color: #fff;
+  border-radius: 20px;
+}
+#score_top p {
+  
+}
+#rank {
+  font-size: 40px;
+  font-weight: bold;
+  line-height: 1.1em;
+}
+#anata {
+  text-align: left;
+  padding: 10px 0 0 10px;
+}
+#level {
+  text-align: right;
+  padding: 0 10px 10px 0;
+  margin: 0em;
+}
+#star {
+  font-size: 25px;
+  clear: both;
+  margin: 0 auto;
+  text-align: center;
+  font-weight: bold;
+  color: #CCCCCC;
+  line-height: 1em;
+  padding-bottom: 10px;
+}
+.star_list {
+    display: inline;
+    margin: 0;
+}
+.star1, .star2, .star3, .star4, .star5, .star6, .star7 {
+    //color: #F5C87F;
+}
+#score_detail{
+  background-color: #F5E6CE;
+  border-radius: 20px;
+}
+.clear {
+    clear: both;
+}
+#score_detail {
+
+}
+#desc {
+  text-align: left;
+  font-size: 12px;
+  margin: 10px 10px 30px 10px;
+}
+.tensu {
+  text-align: left;
+  margin: 20px 20px 0px 20px;
+}
+.maru {
+    width: 40px;
+    height: 40px;
+    background: #F5C87F;
+    padding: 20px 15px;
+    border-radius: 50%;
+    font-size: 12px;
+    line-height: 1em;
+    margin: 0 30px 0 0;
+}
+.tensu_in {
+    font-size: 35px;
+    margin: 0 0 0 30px;
+    position: relative;
+    top: 7px;
+}
+.sougouten {
+    font-size: 1.2em;
+        font-weight: bold;
+        color: #F5A623;
+        padding-bottom: 20px;
+}
+.sougouten_in {
+    font-size: 50px;
+    margin: 10px 0 20px 30px;
+    
+    position: relative;
+    top: 7px; 
+
+}
+#insyutagram {
+    background: #fff;
+    margin: 20px;
+    border-radius: 20px;
+    font-size: 12px;
+    padding: 10px 10px;
+}
+
+

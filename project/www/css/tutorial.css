@@ -1,0 +1,135 @@
+/* This is a CSS file */
+
+/**/
+
+
+.bg-red {
+    background: #DE7682;
+}
+
+.green {
+font-size:25px;
+padding:5px;
+ background:#25b425;
+ border-radius: 4px;
+}
+
+.red {
+font-size:25px;
+padding:5px;
+    background: #DE7682;
+    border-radius: 4px;
+}
+
+h1 {
+    color: #444;
+    margin:0;
+    text-align: center;
+    font-size:15px;
+}
+.ui-page {
+    background: #F3A537;
+}
+.page {
+    background: white;
+}
+.degree-area {
+    background: #F5E6CF;
+    padding-top: 5px;   
+}
+.degree {
+    padding-left:35px;
+    font-size: 45px;
+    color:#F3A537;
+    font-weight:bold;
+    -webkit-text-stroke:1px #fff;
+}
+
+.img-squere {
+    width:130px;
+    height:130px;
+    background: white;
+    margin-left: 180px;
+    border-radius: 20px;
+}
+.test {
+    float:left;
+}
+
+.comment {
+    text-align: center;
+    color: white;
+    padding-right:10px;
+    padding-left:10px;
+    font-size:15px;
+}
+
+.box {
+    background: #F3A537;
+    height: 330px;
+    overflow: scroll;
+
+}
+
+/** コメント風デザイン*/
+.fbox {
+    color: #333;
+    position: relative;
+    display:inline-block;
+    padding:10px ;
+    text-align:left;
+    background-color:#ffffff;
+    margin: 5px 5px 5px 10px;
+    border-radius: 5px ;
+}
+p.fbox {
+    font-size: 12px;
+}
+.fbox:after, .fbox:before {
+    content: "";
+    position: absolute;
+    height: 0;
+    width: 0;
+}
+  .fbox:after {
+    top: 5px;
+    left: -20px; 
+    border: 10px solid transparent;
+    border-right: 15px solid #ffffff; /*13px*/
+}
+.fbox:before {
+    top: 5px;
+    left: -20px;
+    border: 10px solid transparent;
+    border-right: 10px solid #ffffff; /*10px*/
+}
+.space {
+    height:300px;
+}
+
+.raise {
+    margin-left: 10px;
+    font-weight: bold;
+    position: relative;
+    display: inline-block;
+    padding: 0.25em 0.5em;
+    text-decoration: none;
+    color: #FFF;
+    background: #F5C87F;/*色*/
+    border: solid 0px #0f9ada;/*線色*/
+    border-radius: 4px;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.2);
+    text-shadow: 0 1px 0 rgba(0,0,0,0.2);
+    margin: 5px 5px 5px 10px;
+}
+
+.raise:active {/*押したとき*/
+    border: solid 1px #03A9F4;
+    box-shadow: none;
+    text-shadow: none;
+}
+
+h1 > img {
+    width: 40%;
+    margin: 20px 0 5px 0;
+}

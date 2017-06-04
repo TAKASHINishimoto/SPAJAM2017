@@ -1,0 +1,117 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="Content-Security-Policy" content="default-src * data:; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
+    <script src="components/loader.js"></script>
+    <link rel="stylesheet" href="components/loader.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    
+    <script type="text/javascript" src="components/loader.js"></script>
+    <link rel="stylesheet" type="text/css" href="components/loader.css">
+    <script type="text/javascript">
+        document.addEventListener("deviceready", onDeviceReady, false);
+        function onDeviceReady(){
+            console.log("PhoneGap is ready.");
+            monaca.updateUIStyle("header", "title", "PhoneGap Demo");
+            monaca.updateUIStyle("tapme-button", "disable", true);
+        }
+    </script>
+    <script type="text/javascript" charset="utf-8" src="phonegap-demo/main.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/score.js"></script>
+</head>
+<body id="score_page">
+<body onload="init();" id="stage" class="theme">
+    <div>
+        <div id="score_area">
+            <div id="score_top">
+                <dl>
+                    <dt><p id="anata">あなたは</p><p id="rank">部長</p><p id="level">レベル</p></dt>
+                	<dd id="star">
+                    <ul>
+                        <li class="star_list star1">★</li>
+                        <li class="star_list star2">★</li>
+                        <li class="star_list star3">★</li>
+                        <li class="star_list star4">★</li>
+                        <li class="star_list star5">★</li>
+                        <li class="star_list star6">★</li>
+                        <li class="star_list star7">★</li>
+                        </ul>
+                	</dd>
+                </dl>
+            </div>
+            <div id="score_detail">
+                <p id="desc">desc</p>
+            
+            <div id="score_values">
+                <p class="tensu">
+                    <span class="maru">注ぎ方</span>技術点<span class="tensu_in score1">00</span>
+                </p>
+                <p class="tensu">
+                    <span class="maru">黄金比</span>芸術点<span class="tensu_in score2">00</span>
+                </p>
+                <p class="sougouten">
+                    スコア<span class="sougouten_in">000</span>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div id="insyutagram">
+            <a class="twitter"  onClick="window.open(encodeURI(decodeURI(this.href)), 'tweetwindow', 'width=650, height=470, personalbar=0, toolbar=0, scrollbars=1, sizable=1'); return false;" rel="nofollow">#飲酒タグラム(#insyutagram)に投稿</a>
+
+
+    </div>
+    <a href="index.html">TOPへ</a>
+    
+    <script>
+        var score1 = sessionStorage.getItem('score1');
+        var score2 = sessionStorage.getItem('score2');
+        var total_score = parseInt(score1) + parseInt(score2);
+        $(".tensu_in.score1").text(score1);
+        $(".tensu_in.score2").text(score2);
+        $(".sougouten_in").text(total_score);
+        
+        if (parseInt(total_score) < 30) {
+             var tweet = "【新入社員】レベル ★☆☆☆☆☆☆ スコア "+ total_score +"（技術点 "+ score1 +"、芸術点 "+ score2 +"）";
+            $("#rank").text("新入社員");
+            $("#desc").text("てめぇはビールもまともに注げねぇのか！ 大学時代ろくに勉強もしていないくせに仕事中も生意気な口を聞きやがって。出直してこい！");
+            $('.star1').css('color', '#F5C87F');
+        } else if (parseInt(total_score) < 60) {
+             var tweet = "【若手】レベル ★★☆☆☆☆☆ スコア "+ total_score +"（技術点 "+ score1 +"、芸術点 "+ score2 +"）";
+            $("#rank").text("若手");
+            $("#desc").text("数年立つとビールくらいは注げるようになるもんだねぇ。今度、俺と一緒に飲みに行こう！");
+            $('.star1,.star2').css('color', '#F5C87F');
+        } else if (parseInt(total_score) < 90) {
+             var tweet = "【係長】レベル ★★★☆☆☆☆ スコア "+ total_score +"（技術点 "+ score1 +"、芸術点 "+ score2 +"）";
+            $("#rank").text("係長");
+            $("#desc").text("忙しくて辛い毎日に、家で飲むビールの美味しさが身にしみる年になってきました。明日も1日頑張るぞ！");
+            $('.star1,.star2,.star3').css('color', '#F5C87F');
+        } else if (parseInt(total_score) < 120) {
+             var tweet = "【課長】レベル ★★★★☆☆☆ スコア "+ total_score +"（技術点 "+ score1 +"、芸術点 "+ score2 +"）";
+            $("#rank").text("課長");
+            $("#desc").text("中間管理職って大変ですよね。部下の指導、収支管理、、、胃に穴があかないように息抜きにはビールも大切ですね！");
+            $('.star1,.star2,.star3,.star4').css('color', '#F5C87F');
+        } else if (parseInt(total_score) < 150) {
+             var tweet = "【部長】レベル ★★★★★☆☆ スコア "+ total_score +"（技術点 "+ score1 +"、芸術点 "+ score2 +"）";
+            $("#rank").text("部長");
+            $("#desc").text("よっ！部長！　部長ランクのあなたは、重要なお客様との接待でも、物怖じせずにビールを注ぐことができます。将来の社長候補かも…？");
+            $('.star1,.star2,.star3,.star4,.star5').css('color', '#F5C87F');
+        } else if (parseInt(total_score) < 180) {
+             var tweet = "【常務】レベル ★★★★★★☆ スコア "+ total_score +"（技術点 "+ score1 +"、芸術点 "+ score2 +"）";
+            $("#rank").text("常務");
+            $("#desc").text("常務だぞ！常務！ジョウム！！");
+            $('.star1,.star2,.star3,.star4,.star5,.star6').css('color', '#F5C87F');
+        } else {
+             var tweet = "【社長】レベル ★★★★★★★ スコア "+ total_score +"（技術点 "+ score1 +"、芸術点 "+ score2 +"）";
+            $("#rank").text("社長");
+            $("#desc").text("社長ご就任おめでとうございます！社長のお酌で、素晴らしい未来を創りましょう！");
+            $('.star1,.star2,.star3,.star4,.star5,.star6,.star7').css('color', '#F5C87F');
+        }
+        
+        
+        $(".twitter").attr("href", "http://twitter.com/share?text=BEERs " + tweet + "&hashtags=insyutagram\, 飲酒たぐらむ")
+    </script>
+</body>
+</html>
